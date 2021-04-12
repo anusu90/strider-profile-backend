@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
 app.use(function (req, res, next) {
-  let allowedOrigin = ["http://localhost:3000", "https://nifty-keller-c90a19.netlify.app"]
+  let allowedOrigin = ["http://localhost:3000", "https://nifty-keller-c90a19.netlify.app", "https://anunaysinha.online"]
   console.log(allowedOrigin.indexOf(req.headers.origin));
   if (allowedOrigin.indexOf(req.headers.origin) !== -1) {
     res.header("Access-Control-Allow-Origin", req.headers.origin)
